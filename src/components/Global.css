@@ -1,8 +1,10 @@
 :root {
   --presenterColor: rgb(0, 0, 0);
-  --mainTextColor: rgb(0, 110, 255);
-  --secondaryTextColor: rgb(109, 172, 255);
+  --mainTextColor: rgb(102, 252, 241);
+  --secondaryTextColor: rgb(197, 198, 199);
   --whiteText: rgb(255, 255, 255);
+  --grey: rgb(68, 68, 68);
+  --darkGrey: rgb(49, 49, 49);
   --transition: 0.3s;
 }
 
@@ -13,16 +15,16 @@
   font-size: 2rem;
   margin: 10px 10px;
   border-radius: 9999px;
-  color: var(--whiteText);
-  background-color: var(--mainTextColor);
+  color: var(--secondaryTextColor);
+  background-color: var(--grey);
   transition: var(--transition);
 }
 
-@keyframes ColorHueChanger {
-  from {
-    filter: hue-rotate(0deg);
-  }
-  to {
-    filter: hue-rotate(360deg);
-  }
+.typicalbtn:hover {
+  color: var(--whiteText);
+  background-color: var(--darkGrey);
+}
+
+a {
+  color: var(--secondaryTextColor);
 }
