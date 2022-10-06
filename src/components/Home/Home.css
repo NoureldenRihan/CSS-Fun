@@ -1,0 +1,57 @@
+.homeMain {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+header {
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+}
+
+.title {
+  width: fit-content;
+  margin: auto;
+  font-size: 8.5rem;
+  color: var(--mainTextColor);
+  transition: var(--transition);
+}
+
+.title:hover {
+  animation: ColorHueChanger 2s infinite ease-in-out;
+}
+
+.about {
+  font-size: 2rem;
+  color: var(--secondaryTextColor);
+}
+
+.aboutbtn:hover {
+  animation: ColorHueChanger 5s infinite alternate;
+}
+
+.text1 {
+  font-size: 3rem;
+}
+
+.text2 {
+  margin: 20px 0 20px 0;
+  font-size: 1.5rem;
+}
+
+.startbtnHolder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
