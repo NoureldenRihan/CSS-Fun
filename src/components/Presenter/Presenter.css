@@ -6,15 +6,16 @@
   border-radius: 50%;
   background-color: var(--presenterColor);
   transition: var(--transition);
+  z-index: 10;
 }
 
-.fill {
+.empty {
   width: 150vw;
   height: 150vw;
   animation: Intro 1.5s forwards;
 }
 
-.empty {
+.fill {
   width: 0;
   height: 0;
   animation: Outro 1.5s forwards;

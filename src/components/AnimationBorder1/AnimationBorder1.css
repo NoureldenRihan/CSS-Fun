@@ -1,0 +1,283 @@
+:root {
+  --borderColor1: rgb(254, 5, 5);
+  --borderColor2: rgb(0, 26, 255);
+  --backgroundColor: rgb(19, 2, 37);
+  --trackColor: rgba(0, 0, 0, 0.412);
+}
+
+main.trick {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backgroundColor);
+}
+
+.holder1,
+.holder2,
+.holder3,
+.holder4,
+.holder5,
+.holder6,
+.holder7,
+.holder8,
+.holder9,
+.holder10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--trackColor);
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.holder1::before,
+.holder2::before,
+.holder3::before,
+.holder4::before,
+.holder5::before,
+.holder6::before,
+.holder7::before,
+.holder8::before,
+.holder9::before,
+.holder10::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(var(--borderColor1) 50%, var(--borderColor2) 50%);
+  animation: BorderAnimation 3s linear infinite, HueRotate 6s infinite forwards;
+}
+
+.holder1::after,
+.holder2::after,
+.holder3::after,
+.holder4::after,
+.holder5::after,
+.holder6::after,
+.holder7::after,
+.holder8::after,
+.holder9::after,
+.holder10::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  background-color: var(--backgroundColor);
+  border-radius: 16px;
+}
+
+.holder1 {
+  width: max-content;
+  height: 300px;
+  padding: 20px;
+  text-align: center;
+}
+
+.holder1::before {
+  width: 150px;
+  height: 200%;
+}
+
+h1 {
+  opacity: 0.5;
+  font-size: 2.5rem;
+  z-index: 2;
+  color: rgb(255, 255, 255);
+  animation: ShowText 3s ease-in-out 500ms forwards;
+}
+
+.holder2 {
+  top: -20px;
+  left: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder2::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder3 {
+  bottom: -20px;
+  right: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder3::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder4 {
+  top: -30px;
+  left: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder4::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder5 {
+  top: -40px;
+  left: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder5::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder6 {
+  top: -50px;
+  left: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder6::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder7 {
+  top: -60px;
+  left: -20px;
+  width: 300px;
+  height: 300px;
+}
+
+.holder7::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder8 {
+  bottom: -70px;
+  left: -20px;
+  width: 700px;
+  height: 200px;
+}
+
+.holder8::before {
+  width: 150px;
+  height: 400%;
+}
+
+.holder9 {
+  bottom: -70px;
+  left: -85px;
+  width: 700px;
+  height: 200px;
+}
+
+.holder9::before {
+  width: 150px;
+  height: 400%;
+}
+
+.holder10 {
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.holder10::before {
+  width: 150px;
+  height: 200%;
+}
+
+.holder10::after {
+  border-radius: 50%;
+}
+
+@media (max-width: 975px) {
+  .holder8 {
+    left: -200px;
+  }
+
+  .holder9 {
+    left: -265px;
+  }
+}
+
+@media (max-width: 800px) {
+  .holder8 {
+    left: -400px;
+  }
+
+  .holder9 {
+    left: -465px;
+  }
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .holder1 {
+    height: 150px;
+  }
+
+  .holder1::before {
+    width: 75px;
+  }
+
+  .holder2 {
+    left: -150px;
+  }
+
+  .holder4,
+  .holder5,
+  .holder6,
+  .holder7 {
+    left: -150px;
+  }
+
+  .holder8 {
+    left: -550px;
+  }
+
+  .holder9 {
+    left: -615px;
+  }
+}
+
+@keyframes BorderAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes ShowText {
+  from {
+    opacity: 0;
+    scale: 0;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes HueRotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(359deg);
+  }
+}

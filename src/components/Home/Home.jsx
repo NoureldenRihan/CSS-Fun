@@ -8,7 +8,7 @@ function Home() {
   return (
     <div className="homeMain">
       <div className="overlay"></div>
-      <Presenter animation={`fill`} />
+      <Presenter animation={"empty"} />
       <div className="container">
         <header>
           <h1 className="title">CSS Fun</h1>
@@ -17,7 +17,7 @@ function Home() {
             my skills
           </h3>
           <button className="typicalbtn aboutbtn">
-            <Link to={"s"}>More About Me</Link>
+            <a href="https://nourelden-rihan.web.app/">More About Me</a>
           </button>
         </header>
         <Info />

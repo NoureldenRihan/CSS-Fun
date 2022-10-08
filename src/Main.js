@@ -10,9 +10,12 @@ function Main() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/tricklist" element={<Home />} />
-          <Route path="/tricks" element={<TrickContainer />} />
+          <Route
+            path="/:trickName"
+            element={<TrickContainer chosen={true} />}
+          />
+          <Route path="/tricks" element={<TrickContainer chosen={false} />} />
         </Routes>
-        <Home />
       </div>
     </Router>
   );
