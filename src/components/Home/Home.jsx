@@ -1,7 +1,6 @@
 import "./Home.css";
 import "../Global.css";
 import Presenter from "../Presenter/Presenter";
-import { Link } from "react-router-dom";
 import Info from "../Info/Info";
 
 function Home() {

@@ -21,7 +21,7 @@ function TrickContainer(props) {
         return trick.component;
       });
     } else {
-      return <Navigate to={`/${tricks[0].name}`} />;
+      return <Navigate to={`/${tricks[0].name}`} replace />;
     }
   };
 

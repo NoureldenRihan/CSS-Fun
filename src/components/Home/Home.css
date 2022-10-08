@@ -45,6 +45,21 @@ header {
   color: var(--secondaryTextColor);
 }
 
+@media (max-width: 730px) {
+  .title {
+    font-size: 4.5rem;
+  }
+  .about {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    margin-top: 7vh;
+  }
+}
+
 @keyframes BackgroundAnimation {
   0%,
   100% {
