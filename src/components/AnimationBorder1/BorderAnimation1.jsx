@@ -1,11 +1,11 @@
 import Presenter from "../Presenter/Presenter";
-import "./AnimationBorder1.css";
+import "./BorderAnimation1.css";
 
-function AnimationBorder1() {
+function BorderAnimation1() {
   return (
     <div>
       <Presenter animation={"empty"} />
-      <main className="trick">
+      <main className="BA1trick">
         <div className="holder1">
           <h1>Border Animation</h1>
         </div>
@@ -23,4 +23,4 @@ function AnimationBorder1() {
   );
 }
 
-export default AnimationBorder1;
+export default BorderAnimation1;

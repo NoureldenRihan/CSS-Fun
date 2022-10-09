@@ -1,18 +1,18 @@
 :root {
-  --borderColor1: rgb(254, 5, 5);
-  --borderColor2: rgb(0, 26, 255);
-  --backgroundColor: rgb(19, 2, 37);
-  --trackColor: rgba(0, 0, 0, 0.412);
+  --BA1BorderColor1: rgb(254, 5, 5);
+  --BA1BorderColor2: rgb(0, 26, 255);
+  --BA1BackgroundColor: rgb(19, 2, 37);
+  --BA1TrackColor: rgba(0, 0, 0, 0.412);
 }
 
-main.trick {
+main.BA1trick {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: var(--backgroundColor);
+  background-color: var(--BA1BackgroundColor);
 }
 
 .holder1,
@@ -29,7 +29,7 @@ main.trick {
   justify-content: center;
   align-items: center;
   position: absolute;
-  background-color: var(--trackColor);
+  background-color: var(--BA1TrackColor);
   overflow: hidden;
   border-radius: 20px;
 }
@@ -46,7 +46,10 @@ main.trick {
 .holder10::before {
   content: "";
   position: absolute;
-  background: linear-gradient(var(--borderColor1) 50%, var(--borderColor2) 50%);
+  background: linear-gradient(
+    var(--BA1BorderColor1) 50%,
+    var(--BA1BorderColor2) 50%
+  );
   animation: BorderAnimation 3s linear infinite, HueRotate 6s infinite forwards;
 }
 
@@ -63,7 +66,7 @@ main.trick {
   content: "";
   position: absolute;
   inset: 4px;
-  background-color: var(--backgroundColor);
+  background-color: var(--BA1BackgroundColor);
   border-radius: 16px;
 }
 
