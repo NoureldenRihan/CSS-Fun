@@ -1,6 +1,7 @@
 :root {
   --LA1BackgroundColor: rgb(0, 0, 0);
   --LA1LoadingDotsColor: rgb(255, 255, 255);
+  --MainAnimationDuration: 5s;
 }
 
 main.LA1trick {
@@ -35,16 +36,16 @@ main.LA1trick {
 }
 
 .loader1 {
-  animation: Loading 7s linear 2s infinite;
+  animation: Loading var(--MainAnimationDuration) linear 2s infinite;
 }
 
 .loader2 {
   margin: 0 25px;
-  animation: Loading 7s linear 2.5s infinite;
+  animation: Loading var(--MainAnimationDuration) linear 2.5s infinite;
 }
 
 .loader3 {
-  animation: Loading 7s linear 3s infinite;
+  animation: Loading var(--MainAnimationDuration) linear 3s infinite;
 }
 
 @media (max-width: 670px) {
