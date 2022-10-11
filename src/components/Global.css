@@ -28,3 +28,17 @@
 a {
   color: var(--secondaryTextColor);
 }
+
+@media (max-width: 1000px) {
+  .typicalbtn {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .typicalbtn {
+    padding: 8px 16px;
+    font-size: 1.3rem;
+    margin: 8px 8px;
+  }
+}

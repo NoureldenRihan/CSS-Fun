@@ -9,8 +9,8 @@ function Info() {
           You are about to embark on a journey of some amazing Pure CSS tricks
         </h2>
         <h3 className="text2">
-          You can Navigate Back and forth with your "A" and "D" keys or press
-          "esc" to return here.
+          You can Navigate with your "A" and "D" keys or by clicking on your
+          screen's right and left sides or press "esc" to return here.
         </h3>
         <div className="startbtnHolder">
           <button className="typicalbtn">
