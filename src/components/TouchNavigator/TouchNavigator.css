@@ -1,10 +1,15 @@
 .right,
-.left {
+.left,
+.top {
   position: absolute;
   top: 0;
+  background-color: transparent;
+}
+
+.right,
+.left {
   height: 100%;
   width: 30vw;
-  background-color: transparent;
   z-index: 20;
 }
 
@@ -14,6 +19,12 @@
 
 .left {
   left: 0;
+}
+
+.top {
+  height: 30vh;
+  width: 100vw;
+  z-index: 19;
 }
 
 @media (max-width: 1000px) {

@@ -76,6 +76,8 @@ function TrickContainer(props) {
       counterChecker("inc");
     } else if (direction === "left") {
       counterChecker("dec");
+    } else if (direction === "top") {
+      navigate("/");
     }
   };
 

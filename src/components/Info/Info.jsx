@@ -10,7 +10,8 @@ function Info() {
         </h2>
         <h3 className="text2">
           You can Navigate with your "A" and "D" keys or by clicking on your
-          screen's right and left sides or press "esc" to return here.
+          screen's right and left sides <br /> Press "esc" or click on the top
+          center portion of your screen to return here.
         </h3>
         <div className="startbtnHolder">
           <button className="typicalbtn">
