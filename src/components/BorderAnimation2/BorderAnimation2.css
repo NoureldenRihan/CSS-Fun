@@ -1,0 +1,67 @@
+:root {
+  --BA2backgroundColor: rgb(26, 0, 45);
+  --BA2TextColor: rgb(217, 217, 217);
+  --BA2transition: 0.3s;
+}
+
+.BA2trick {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--BA2backgroundColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.BA2btn1holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: var(--BA2transition);
+}
+
+.BA2btn1holder:hover::before {
+  animation: BorderRotate 2s linear infinite;
+}
+
+.BA2btn1holder::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(rgb(26, 255, 0) 50%, rgb(0, 217, 255) 50%);
+  height: 500%;
+  width: 100px;
+  transform: rotate(80deg);
+}
+
+.BA2btn1holder::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background-color: var(--BA2backgroundColor);
+}
+
+.BA2btn1 {
+  position: relative;
+  font-size: 5rem;
+  outline: 0;
+  color: var(--BA2TextColor);
+  background-color: transparent;
+  padding: 25px 50px;
+  border: 10px solid transparent;
+  z-index: 5;
+  transition: var(--BA2transition);
+}
+
+@keyframes BorderRotate {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(80deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(260deg);
+  }
+}

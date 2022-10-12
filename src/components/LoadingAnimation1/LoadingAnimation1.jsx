@@ -6,10 +6,10 @@ function LoadingAnimation1() {
     <div>
       <Presenter animation={"empty"} />
       <main className="LA1trick">
-        <div className="loaders">
-          <div className="loader1"></div>
-          <div className="loader2"></div>
-          <div className="loader3"></div>
+        <div className="LA1loaders">
+          <div className="LA1loader1"></div>
+          <div className="LA1loader2"></div>
+          <div className="LA1loader3"></div>
         </div>
       </main>
     </div>

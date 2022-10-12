@@ -3,6 +3,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import TouchNavigator from "../TouchNavigator/TouchNavigator";
 import BorderAnimation1 from "../BorderAnimation1/BorderAnimation1";
 import LoadingAnimation1 from "../LoadingAnimation1/LoadingAnimation1";
+import BorderAnimation2 from "../BorderAnimation2/BorderAnimation2";
 
 function TrickContainer(props) {
   const [tricks] = useState([
@@ -13,6 +14,10 @@ function TrickContainer(props) {
     {
       name: "LoadingAnimation1",
       component: <LoadingAnimation1 key={"LA1"} />,
+    },
+    {
+      name: "BorderAnimation2",
+      component: <BorderAnimation2 key={"BA2"} />,
     },
   ]);
   const navigate = useNavigate();

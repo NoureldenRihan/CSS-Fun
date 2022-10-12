@@ -15,16 +15,16 @@ main.BA1trick {
   background-color: var(--BA1BackgroundColor);
 }
 
-.holder1,
-.holder2,
-.holder3,
-.holder4,
-.holder5,
-.holder6,
-.holder7,
-.holder8,
-.holder9,
-.holder10 {
+.BA1holder1,
+.BA1holder2,
+.BA1holder3,
+.BA1holder4,
+.BA1holder5,
+.BA1holder6,
+.BA1holder7,
+.BA1holder8,
+.BA1holder9,
+.BA1holder10 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,16 +34,16 @@ main.BA1trick {
   border-radius: 20px;
 }
 
-.holder1::before,
-.holder2::before,
-.holder3::before,
-.holder4::before,
-.holder5::before,
-.holder6::before,
-.holder7::before,
-.holder8::before,
-.holder9::before,
-.holder10::before {
+.BA1holder1::before,
+.BA1holder2::before,
+.BA1holder3::before,
+.BA1holder4::before,
+.BA1holder5::before,
+.BA1holder6::before,
+.BA1holder7::before,
+.BA1holder8::before,
+.BA1holder9::before,
+.BA1holder10::before {
   content: "";
   position: absolute;
   background: linear-gradient(
@@ -53,16 +53,16 @@ main.BA1trick {
   animation: BorderAnimation 3s linear infinite, HueRotate 6s infinite forwards;
 }
 
-.holder1::after,
-.holder2::after,
-.holder3::after,
-.holder4::after,
-.holder5::after,
-.holder6::after,
-.holder7::after,
-.holder8::after,
-.holder9::after,
-.holder10::after {
+.BA1holder1::after,
+.BA1holder2::after,
+.BA1holder3::after,
+.BA1holder4::after,
+.BA1holder5::after,
+.BA1holder6::after,
+.BA1holder7::after,
+.BA1holder8::after,
+.BA1holder9::after,
+.BA1holder10::after {
   content: "";
   position: absolute;
   inset: 4px;
@@ -70,14 +70,14 @@ main.BA1trick {
   border-radius: 16px;
 }
 
-.holder1 {
+.BA1holder1 {
   width: max-content;
   height: 300px;
   padding: 20px;
   text-align: center;
 }
 
-.holder1::before {
+.BA1holder1::before {
   width: 150px;
   height: 200%;
 }
@@ -90,103 +90,103 @@ h1 {
   animation: ShowText 3s ease-in-out 500ms forwards;
 }
 
-.holder2 {
+.BA1holder2 {
   top: -20px;
   left: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder2::before {
+.BA1holder2::before {
   width: 150px;
   height: 200%;
 }
 
-.holder3 {
+.BA1holder3 {
   bottom: -20px;
   right: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder3::before {
+.BA1holder3::before {
   width: 150px;
   height: 200%;
 }
 
-.holder4 {
+.BA1holder4 {
   top: -30px;
   left: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder4::before {
+.BA1holder4::before {
   width: 150px;
   height: 200%;
 }
 
-.holder5 {
+.BA1holder5 {
   top: -40px;
   left: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder5::before {
+.BA1holder5::before {
   width: 150px;
   height: 200%;
 }
 
-.holder6 {
+.BA1holder6 {
   top: -50px;
   left: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder6::before {
+.BA1holder6::before {
   width: 150px;
   height: 200%;
 }
 
-.holder7 {
+.BA1holder7 {
   top: -60px;
   left: -20px;
   width: 300px;
   height: 300px;
 }
 
-.holder7::before {
+.BA1holder7::before {
   width: 150px;
   height: 200%;
 }
 
-.holder8 {
+.BA1holder8 {
   bottom: -70px;
   left: -20px;
   width: 700px;
   height: 200px;
 }
 
-.holder8::before {
+.BA1holder8::before {
   width: 150px;
   height: 400%;
 }
 
-.holder9 {
+.BA1holder9 {
   bottom: -70px;
   left: -85px;
   width: 700px;
   height: 200px;
 }
 
-.holder9::before {
+.BA1holder9::before {
   width: 150px;
   height: 400%;
 }
 
-.holder10 {
+.BA1holder10 {
   top: -100px;
   right: -100px;
   width: 300px;
@@ -194,31 +194,31 @@ h1 {
   border-radius: 50%;
 }
 
-.holder10::before {
+.BA1holder10::before {
   width: 150px;
   height: 200%;
 }
 
-.holder10::after {
+.BA1holder10::after {
   border-radius: 50%;
 }
 
 @media (max-width: 975px) {
-  .holder8 {
+  .BA1holder8 {
     left: -200px;
   }
 
-  .holder9 {
+  .BA1holder9 {
     left: -265px;
   }
 }
 
 @media (max-width: 800px) {
-  .holder8 {
+  .BA1holder8 {
     left: -400px;
   }
 
-  .holder9 {
+  .BA1holder9 {
     left: -465px;
   }
 }
@@ -228,30 +228,30 @@ h1 {
     font-size: 1.5rem;
   }
 
-  .holder1 {
+  .BA1holder1 {
     height: 150px;
   }
 
-  .holder1::before {
+  .BA1holder1::before {
     width: 75px;
   }
 
-  .holder2 {
+  .BA1holder2 {
     left: -150px;
   }
 
-  .holder4,
-  .holder5,
-  .holder6,
-  .holder7 {
+  .BA1holder4,
+  .BA1holder5,
+  .BA1holder6,
+  .BA1holder7 {
     left: -150px;
   }
 
-  .holder8 {
+  .BA1holder8 {
     left: -550px;
   }
 
-  .holder9 {
+  .BA1holder9 {
     left: -615px;
   }
 }
