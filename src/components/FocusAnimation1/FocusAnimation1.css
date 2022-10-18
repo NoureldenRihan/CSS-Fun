@@ -59,6 +59,21 @@
   margin-right: 30px;
 }
 
+@media (max-width: 1750px) {
+  .FA1Letter {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .FA1Letter {
+    font-size: 8rem;
+  }
+  .FA1textholder {
+    flex-flow: column wrap;
+  }
+}
+
 @media (max-width: 850px) {
   .FA1Letter {
     font-size: 7rem;
@@ -67,9 +82,6 @@
 }
 
 @media (max-width: 650px) {
-  .FA1textholder {
-    flex-flow: column wrap;
-  }
   .FA1Letter {
     font-size: 6rem;
     filter: blur(4px);
