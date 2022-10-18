@@ -6,13 +6,14 @@
 }
 
 .FA1trick {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  overflow: hidden;
 }
 
 .FA1background {
@@ -45,14 +46,11 @@
   padding: 2px;
   cursor: zoom-in;
   transition: var(--FA1LowTransition);
+  user-select: none;
 }
 
 .FA1Letter:hover {
   filter: blur(0px);
-}
-
-.FA1Letter::selection {
-  background-color: var(--FA1backgroundColor1);
 }
 
 .FA1Container {
