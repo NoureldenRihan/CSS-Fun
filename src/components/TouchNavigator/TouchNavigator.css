@@ -9,7 +9,7 @@
 .right,
 .left {
   height: 100%;
-  width: 30vw;
+  width: 15vw;
   z-index: 20;
 }
 
@@ -22,14 +22,7 @@
 }
 
 .top {
-  height: 30vh;
+  height: 20vh;
   width: 100vw;
   z-index: 19;
-}
-
-@media (max-width: 1000px) {
-  .right,
-  .left {
-    width: 33vw;
-  }
 }

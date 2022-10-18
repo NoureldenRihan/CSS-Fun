@@ -33,7 +33,7 @@
 }
 
 .BA2btn1holder:hover::before {
-  animation: BorderRotate 2s linear infinite;
+  animation: BA2BorderRotate 2s linear infinite;
 }
 
 .BA2btn1holder::after {
@@ -66,7 +66,7 @@
   }
 }
 
-@keyframes BorderRotate {
+@keyframes BA2BorderRotate {
   0% {
     filter: hue-rotate(0deg);
     transform: rotate(80deg);

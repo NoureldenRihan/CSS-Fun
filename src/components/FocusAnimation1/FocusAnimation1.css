@@ -1,0 +1,92 @@
+:root {
+  --FA1backgroundColor1: #7300ff;
+  --FA1backgroundColor2: #de00ff;
+  --FA1textColor: #ffffff;
+  --FA1LowTransition: 0.2s;
+}
+
+.FA1trick {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.FA1background {
+  position: absolute;
+  width: 300vw;
+  height: 300vh;
+  background: linear-gradient(
+    90deg,
+    var(--FA1backgroundColor1),
+    var(--FA1backgroundColor2)
+  );
+  animation: FA1BackgroundAnimation 10s linear infinite forwards;
+}
+
+.FA1textholder {
+  text-align: center;
+  z-index: 2;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 15vw;
+}
+
+.FA1Letter {
+  filter: blur(15px);
+  font-size: 10rem;
+  color: var(--FA1textColor);
+  padding: 2px;
+  cursor: zoom-in;
+  transition: var(--FA1LowTransition);
+}
+
+.FA1Letter:hover {
+  filter: blur(0px);
+}
+
+.FA1Letter::selection {
+  background-color: var(--FA1backgroundColor1);
+}
+
+.FA1Container {
+  margin-right: 30px;
+}
+
+@media (max-width: 850px) {
+  .FA1Letter {
+    font-size: 7rem;
+    filter: blur(9px);
+  }
+}
+
+@media (max-width: 650px) {
+  .FA1textholder {
+    flex-flow: column wrap;
+  }
+  .FA1Letter {
+    font-size: 6rem;
+    filter: blur(4px);
+  }
+}
+
+@media (max-width: 550px) {
+  .FA1Letter {
+    font-size: 3rem;
+  }
+}
+
+@keyframes FA1BackgroundAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

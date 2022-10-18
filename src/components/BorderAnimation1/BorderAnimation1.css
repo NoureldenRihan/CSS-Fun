@@ -50,7 +50,8 @@ main.BA1trick {
     var(--BA1BorderColor1) 50%,
     var(--BA1BorderColor2) 50%
   );
-  animation: BorderAnimation 3s linear infinite, HueRotate 6s infinite forwards;
+  animation: BA1BorderAnimation 3s linear infinite,
+    BA1HueRotate 6s infinite forwards;
 }
 
 .BA1holder1::after,
@@ -87,7 +88,7 @@ h1 {
   font-size: 2.5rem;
   z-index: 2;
   color: rgb(255, 255, 255);
-  animation: ShowText 3s ease-in-out 500ms forwards;
+  animation: BA1ShowText 3s ease-in-out 500ms forwards;
 }
 
 .BA1holder2 {
@@ -256,7 +257,7 @@ h1 {
   }
 }
 
-@keyframes BorderAnimation {
+@keyframes BA1BorderAnimation {
   from {
     transform: rotate(0deg);
   }
@@ -265,7 +266,7 @@ h1 {
   }
 }
 
-@keyframes ShowText {
+@keyframes BA1ShowText {
   from {
     opacity: 0;
     scale: 0;
@@ -276,7 +277,7 @@ h1 {
   }
 }
 
-@keyframes HueRotate {
+@keyframes BA1HueRotate {
   from {
     filter: hue-rotate(0deg);
   }
