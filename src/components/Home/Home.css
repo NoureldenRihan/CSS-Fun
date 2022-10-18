@@ -36,13 +36,13 @@ header {
   width: fit-content;
   margin: auto;
   font-size: 8.5rem;
-  color: var(--mainTextColor);
+  color: var(--whiteText);
   transition: var(--transition);
 }
 
 .about {
   font-size: 2rem;
-  color: var(--secondaryTextColor);
+  color: var(--whiteText);
 }
 
 @media (max-width: 730px) {

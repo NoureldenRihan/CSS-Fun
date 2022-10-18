@@ -1,12 +1,12 @@
 .text1 {
   font-size: 3rem;
-  color: var(--secondaryTextColor);
+  color: var(--whiteText);
 }
 
 .text2 {
   margin: 20px 0 20px 0;
   font-size: 1.5rem;
-  color: var(--secondaryTextColor);
+  color: var(--whiteText);
 }
 
 .startbtnHolder {

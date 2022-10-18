@@ -20,13 +20,15 @@
   transition: var(--transition);
 }
 
-.typicalbtn:hover {
-  color: var(--whiteText);
-  background-color: var(--darkGrey);
+a {
+  transition: var(--transition);
+  color: var(--secondaryTextColor);
 }
 
-a {
-  color: var(--secondaryTextColor);
+.typicalbtn:hover,
+a:hover {
+  color: var(--whiteText);
+  background-color: var(--darkGrey);
 }
 
 @media (max-width: 1000px) {
