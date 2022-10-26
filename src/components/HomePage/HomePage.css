@@ -69,13 +69,13 @@
 }
 
 header {
-  margin-top: 15vh;
+  margin-top: 10vh;
   margin-bottom: 5vh;
 }
 
 .title {
   width: fit-content;
-  font-size: 8.5rem;
+  font-size: 7rem;
   color: var(--whiteText);
   transition: var(--transition);
 }
@@ -89,18 +89,18 @@ header {
 }
 
 .homeMain footer h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--whiteText);
 }
 
 .homeMain footer p {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--whiteText);
 }
 
 @media (max-width: 1200px) {
   .title {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -117,7 +117,7 @@ header {
 
 @media (max-width: 730px) {
   .title {
-    font-size: 4.5rem;
+    font-size: 4rem;
   }
   .container {
     margin: 0 0 0 20px;
