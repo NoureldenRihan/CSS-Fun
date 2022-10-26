@@ -1,34 +1,56 @@
 :root {
   --presenterColor: rgb(0, 0, 0);
-  --mainTextColor: rgb(102, 252, 241);
-  --secondaryTextColor: rgb(197, 198, 199);
+  --mainTextColor: rgb(161, 36, 92);
+  --secondaryTextColor: rgb(96, 35, 101);
   --whiteText: rgb(255, 255, 255);
+  --backgroundColor1: rgb(72, 73, 189);
+  --backgroundColor2: rgb(60, 18, 77);
   --grey: rgb(68, 68, 68);
   --darkGrey: rgb(49, 49, 49);
   --transition: 0.3s;
 }
 
 .typicalbtn {
+  position: relative;
   border: 0;
   outline: 0;
   padding: 10px 20px;
   font-size: 2rem;
   margin: 10px 10px;
   border-radius: 9999px;
-  color: var(--secondaryTextColor);
-  background-color: var(--grey);
+  overflow: hidden;
+  color: var(--mainTextColor);
+  background-color: var(--backgroundColor2);
   transition: var(--transition);
+}
+
+.typicalbtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 10px;
+  height: 100%;
+  background-color: var(--backgroundColor1);
 }
 
 a {
+  position: relative;
   transition: var(--transition);
-  color: var(--secondaryTextColor);
+  color: var(--whiteText);
+  z-index: 4;
 }
 
-.typicalbtn:hover,
+.typicalbtn:hover {
+  filter: drop-shadow(0 0 5px var(--backgroundColor1));
+}
+
+.typicalbtn:hover::before {
+  animation: ButtonAnimation 0.7s linear forwards infinite;
+}
+
 a:hover {
-  color: var(--whiteText);
-  background-color: var(--darkGrey);
+  filter: drop-shadow(0 0 5px white);
 }
 
 @media (max-width: 1000px) {
@@ -42,5 +64,14 @@ a:hover {
     padding: 8px 16px;
     font-size: 1.3rem;
     margin: 8px 8px;
+  }
+}
+
+@keyframes ButtonAnimation {
+  0% {
+    left: -10px;
+  }
+  100% {
+    left: calc(100% + 10px);
   }
 }

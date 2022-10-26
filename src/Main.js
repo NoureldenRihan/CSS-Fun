@@ -1,15 +1,15 @@
 import "./Main.css";
-import Home from "./components/Home/Home";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TrickContainer from "./components/Tricks/TrickContainer";
+import HomePage from "./components/HomePage/HomePage";
 
 function Main() {
   return (
     <Router>
       <div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tricklist" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/tricklist" element={<HomePage />} />
           <Route
             path="/:trickName"
             element={<TrickContainer chosen={true} />}
