@@ -11,6 +11,7 @@ main.LA1trick {
   width: 100vw;
   height: 100vh;
   background-color: var(--LA1BackgroundColor);
+  overflow: hidden;
 }
 
 .LA1loaders {

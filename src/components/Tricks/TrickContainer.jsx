@@ -1,30 +1,9 @@
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import TouchNavigator from "../TouchNavigator/TouchNavigator";
-import BorderAnimation1 from "../BorderAnimation1/BorderAnimation1";
-import LoadingAnimation1 from "../LoadingAnimation1/LoadingAnimation1";
-import BorderAnimation2 from "../BorderAnimation2/BorderAnimation2";
-import FocusAnimation1 from "../FocusAnimation1/FocusAnimation1";
 
 function TrickContainer(props) {
-  const [tricks] = useState([
-    {
-      name: "BorderAnimation1",
-      component: <BorderAnimation1 key={"BA1"} />,
-    },
-    {
-      name: "LoadingAnimation1",
-      component: <LoadingAnimation1 key={"LA1"} />,
-    },
-    {
-      name: "BorderAnimation2",
-      component: <BorderAnimation2 key={"BA2"} />,
-    },
-    {
-      name: "FocusAnimation1",
-      component: <FocusAnimation1 key={"FA1"} />,
-    },
-  ]);
+  const tricks = props.tricks !== undefined ? props.tricks : "";
   const navigate = useNavigate();
   let { trickName } = useParams();
   let [counter, setcounter] = useState(0);

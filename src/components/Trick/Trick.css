@@ -1,0 +1,68 @@
+.trickholder {
+  position: relative;
+  width: 450px;
+  height: 100px;
+  margin: 50px 0;
+  border-radius: 9999px;
+}
+
+.trickholder::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--bgColor);
+  border-radius: 9999px;
+  transition: 0.3s;
+}
+
+.trickholder:hover::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  width: 100%;
+  height: 75px;
+}
+
+.trick {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  font-size: 2.5rem;
+  border-radius: 9999px;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  transition: 0.3s;
+}
+
+.trick:hover {
+  border: 5px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 550px) {
+  .trickholder {
+    width: 400px;
+    height: 80px;
+    margin: 40px 0;
+  }
+  .trick {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .trickholder {
+    width: 300px;
+    height: 70px;
+    margin: 40px 0;
+  }
+  .trick {
+    font-size: 1.8rem;
+  }
+}

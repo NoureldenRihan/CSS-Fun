@@ -2,19 +2,46 @@ import "./Main.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TrickContainer from "./components/Tricks/TrickContainer";
 import HomePage from "./components/HomePage/HomePage";
+import TricksList from "./components/TricksList/TricksList";
+import { useState } from "react";
+import BorderAnimation1 from "./components/BorderAnimation1/BorderAnimation1";
+import LoadingAnimation1 from "./components/LoadingAnimation1/LoadingAnimation1";
+import BorderAnimation2 from "./components/BorderAnimation2/BorderAnimation2";
+import FocusAnimation1 from "./components/FocusAnimation1/FocusAnimation1";
 
 function Main() {
+  const [tricks] = useState([
+    {
+      name: "BorderAnimation1",
+      component: <BorderAnimation1 key={"BA1"} />,
+    },
+    {
+      name: "LoadingAnimation1",
+      component: <LoadingAnimation1 key={"LA1"} />,
+    },
+    {
+      name: "BorderAnimation2",
+      component: <BorderAnimation2 key={"BA2"} />,
+    },
+    {
+      name: "FocusAnimation1",
+      component: <FocusAnimation1 key={"FA1"} />,
+    },
+  ]);
   return (
     <Router>
       <div>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/tricklist" element={<HomePage />} />
+          <Route path="/trickslist" element={<TricksList tricks={tricks} />} />
           <Route
             path="/:trickName"
-            element={<TrickContainer chosen={true} />}
+            element={<TrickContainer tricks={tricks} chosen={true} />}
           />
-          <Route path="/tricks" element={<TrickContainer chosen={false} />} />
+          <Route
+            path="/tricks"
+            element={<TrickContainer tricks={tricks} chosen={false} />}
+          />
         </Routes>
       </div>
     </Router>

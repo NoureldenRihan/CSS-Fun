@@ -5,9 +5,7 @@ function Info() {
   return (
     <main>
       <section>
-        <h2 className="text1">
-          You are about to embark on a journey of some amazing Pure CSS tricks
-        </h2>
+        <h2 className="text1">A collection of Pure CSS tricks</h2>
         <h3 className="text2">
           You can Navigate with your <span>"A"</span> and <span>"D"</span> keys
           or by clicking on your screen's right and left sides <br /> Press
@@ -19,7 +17,7 @@ function Info() {
             <Link to={"/tricks"}>Start Show</Link>
           </button>
           <button className="typicalbtn">
-            <Link to={"/trickslist"}>Trick List</Link>
+            <Link to={"/trickslist"}>Tricks List</Link>
           </button>
         </div>
       </section>
