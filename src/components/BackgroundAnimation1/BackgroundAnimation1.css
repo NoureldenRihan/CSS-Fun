@@ -1,0 +1,80 @@
+:root {
+  --BG1bubbleBackgroundColor: #1b0031;
+  --BG1bubbleColor1: #00ff1e;
+  --BG1bubbleColor2: #ff0000;
+  --BG1bubbleColor3: #0400ff;
+  --BG1bubbleColor4: #d4ff00;
+}
+
+main.BG1trick {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--BG1bubbleBackgroundColor);
+  overflow: hidden;
+}
+
+.BG1holder {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.BG1text {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50vh;
+}
+
+.BG1text h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  z-index: 5;
+}
+
+.BG1holder .BG1bubble {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: BG1bubbling 10s linear infinite;
+  animation-duration: calc(150s / var(--t));
+}
+
+.BG1holder span:nth-child(n) {
+  background-color: var(--BG1bubbleColor1);
+  box-shadow: 0 0 10px var(--BG1bubbleColor1), 0 0 30px var(--BG1bubbleColor1),
+    0 0 100px 20px var(--BG1bubbleColor1);
+}
+
+.BG1holder span:nth-child(2n) {
+  background-color: var(--BG1bubbleColor2);
+  box-shadow: 0 0 10px var(--BG1bubbleColor2), 0 0 30px var(--BG1bubbleColor2),
+    0 0 100px 20px var(--BG1bubbleColor2);
+}
+.BG1holder span:nth-child(5n) {
+  background-color: var(--BG1bubbleColor3);
+  box-shadow: 0 0 10px var(--BG1bubbleColor3), 0 0 30px var(--BG1bubbleColor3),
+    0 0 100px 20px var(--BG1bubbleColor3);
+}
+.BG1holder span:nth-child(3n) {
+  background-color: var(--BG1bubbleColor4);
+  box-shadow: 0 0 10px var(--BG1bubbleColor4), 0 0 30px var(--BG1bubbleColor4),
+    0 0 100px 20px var(--BG1bubbleColor4);
+}
+
+@keyframes BG1bubbling {
+  0% {
+    transform: translateY(110vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
