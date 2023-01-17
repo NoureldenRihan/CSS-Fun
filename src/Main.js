@@ -9,6 +9,7 @@ import LoadingAnimation1 from "./components/LoadingAnimation1/LoadingAnimation1"
 import BorderAnimation2 from "./components/BorderAnimation2/BorderAnimation2";
 import FocusAnimation1 from "./components/FocusAnimation1/FocusAnimation1";
 import BackgroundAnimation1 from "./components/BackgroundAnimation1/BackgroundAnimation1";
+import HoverAnimation1 from "./components/HoverAnimation1/HoverAnimation1";
 
 function Main() {
   const [tricks] = useState([
@@ -31,6 +32,10 @@ function Main() {
     {
       name: "BackgroundAnimation1",
       component: <BackgroundAnimation1 key={"BG1"} />,
+    },
+    {
+      name: "HoverAnimation1",
+      component: <HoverAnimation1 key={"HA1"} />,
     },
   ]);
   return (

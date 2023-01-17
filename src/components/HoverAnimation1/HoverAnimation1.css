@@ -1,0 +1,161 @@
+:root {
+  --HA1backgroundColor: black;
+  --HA1spanColor: white;
+  --HA1track1spanAnimationDuration: 30s;
+  --HA1track1colorAnimationDuration: 1s;
+  --HA1track2spanAnimationDuration: 30s;
+  --HA1track2colorAnimationDuration: 1s;
+  --HA1track3spanAnimationDuration: 30s;
+  --HA1track3colorAnimationDuration: 1s;
+  --HA1track4spanAnimationDuration: 30s;
+  --HA1track4colorAnimationDuration: 1s;
+}
+
+main.HA1trick {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--HA1backgroundColor);
+}
+
+.HA1text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  text-align: center;
+  color: White;
+  font-size: 180px;
+}
+
+.HA1track1,
+.HA1track2,
+.HA1track3,
+.HA1track4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: max-content;
+  margin-bottom: 20px;
+}
+
+.HA1track1 span,
+.HA1track2 span,
+.HA1track3 span,
+.HA1track4 span {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: var(--HA1spanColor);
+  margin-right: calc(1px * var(--space));
+  z-index: 20;
+  mix-blend-mode: difference;
+}
+
+.HA1track1 span:hover,
+.HA1track2 span:hover,
+.HA1track3 span:hover,
+.HA1track4 span:hover {
+  animation-play-state: paused, running;
+}
+
+.HA1track1 {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.HA1track1 span {
+  animation: HA1spanMovementAnimation var(--HA1track1spanAnimationDuration)
+      linear infinite,
+    HA1colorChanger var(--HA1track1colorAnimationDuration) linear infinite;
+  animation-play-state: running, paused;
+}
+
+.HA1track2 {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.HA1track2 span {
+  animation: HA1spanMovementAnimationReversed
+      var(--HA1track2spanAnimationDuration) linear infinite,
+    HA1colorChanger var(--HA1track2colorAnimationDuration) linear infinite;
+  animation-play-state: running, paused;
+}
+
+.HA1track3 {
+  justify-content: flex-start;
+}
+
+.HA1track3 span {
+  animation: HA1spanMovementAnimation var(--HA1track3spanAnimationDuration)
+      linear infinite,
+    HA1colorChanger var(--HA1track3colorAnimationDuration) linear infinite;
+  animation-play-state: running, paused;
+}
+
+.HA1track4 {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.HA1track4 span {
+  animation: HA1spanMovementAnimationReversed
+      var(--HA1track4spanAnimationDuration) linear infinite,
+    HA1colorChanger var(--HA1track4colorAnimationDuration) linear infinite;
+  animation-play-state: running, paused;
+}
+
+@keyframes HA1colorChanger {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  1% {
+    background-color: red;
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+@keyframes HA1spanMovementAnimation {
+  0% {
+    transform: translateX(-150vw);
+  }
+  50% {
+    transform: translateX(150vw);
+  }
+  100% {
+    transform: translateX(-150vw);
+  }
+}
+
+@keyframes HA1spanMovementAnimationReversed {
+  0% {
+    transform: translateX(150vw);
+  }
+  50% {
+    transform: translateX(-150vw);
+  }
+  100% {
+    transform: translateX(150vw);
+  }
+}
+
+@media (max-width: 900px) {
+  .HA1text {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .HA1text {
+    font-size: 60px;
+  }
+}

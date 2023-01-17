@@ -5,7 +5,7 @@ function Info() {
   return (
     <main>
       <section>
-        <h2 className="text1">A collection of Pure CSS tricks</h2>
+        <h2 className="text1">A collection of CSS & JS Animation tricks</h2>
         <h3 className="text2">
           You can Navigate with your <span>"A"</span> and <span>"D"</span> keys
           or by clicking on your screen's right and left sides <br /> Press
