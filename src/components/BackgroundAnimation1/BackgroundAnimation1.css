@@ -19,16 +19,16 @@ main.BG1trick {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  width: max-content;
 }
 
 .BG1text {
   position: absolute;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
 }
 
 .BG1text h1 {
