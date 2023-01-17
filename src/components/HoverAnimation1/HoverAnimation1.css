@@ -1,14 +1,6 @@
 :root {
   --HA1backgroundColor: black;
   --HA1spanColor: white;
-  --HA1track1spanAnimationDuration: 30s;
-  --HA1track1colorAnimationDuration: 1s;
-  --HA1track2spanAnimationDuration: 30s;
-  --HA1track2colorAnimationDuration: 1s;
-  --HA1track3spanAnimationDuration: 30s;
-  --HA1track3colorAnimationDuration: 1s;
-  --HA1track4spanAnimationDuration: 30s;
-  --HA1track4colorAnimationDuration: 1s;
 }
 
 main.HA1trick {
@@ -17,6 +9,7 @@ main.HA1trick {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background-color: var(--HA1backgroundColor);
 }
 
@@ -68,9 +61,8 @@ main.HA1trick {
 }
 
 .HA1track1 span {
-  animation: HA1spanMovementAnimation var(--HA1track1spanAnimationDuration)
-      linear infinite,
-    HA1colorChanger var(--HA1track1colorAnimationDuration) linear infinite;
+  animation: HA1spanMovementAnimation 30s linear infinite,
+    HA1colorChanger 1s linear infinite;
   animation-play-state: running, paused;
 }
 
@@ -80,9 +72,8 @@ main.HA1trick {
 }
 
 .HA1track2 span {
-  animation: HA1spanMovementAnimationReversed
-      var(--HA1track2spanAnimationDuration) linear infinite,
-    HA1colorChanger var(--HA1track2colorAnimationDuration) linear infinite;
+  animation: HA1spanMovementAnimationReversed 30s linear infinite,
+    HA1colorChanger 1s linear infinite;
   animation-play-state: running, paused;
 }
 
@@ -91,9 +82,8 @@ main.HA1trick {
 }
 
 .HA1track3 span {
-  animation: HA1spanMovementAnimation var(--HA1track3spanAnimationDuration)
-      linear infinite,
-    HA1colorChanger var(--HA1track3colorAnimationDuration) linear infinite;
+  animation: HA1spanMovementAnimation 30s linear infinite,
+    HA1colorChanger 1s linear infinite;
   animation-play-state: running, paused;
 }
 
@@ -103,9 +93,8 @@ main.HA1trick {
 }
 
 .HA1track4 span {
-  animation: HA1spanMovementAnimationReversed
-      var(--HA1track4spanAnimationDuration) linear infinite,
-    HA1colorChanger var(--HA1track4colorAnimationDuration) linear infinite;
+  animation: HA1spanMovementAnimationReversed 30s linear infinite,
+    HA1colorChanger 1s linear infinite;
   animation-play-state: running, paused;
 }
 
@@ -152,10 +141,40 @@ main.HA1trick {
   .HA1text {
     font-size: 120px;
   }
+
+  .HA1track1 span,
+  .HA1track2 span,
+  .HA1track3 span,
+  .HA1track4 span {
+    width: 120px;
+    height: 120px;
+  }
+
+  .HA1track1 span,
+  .HA1track3 span {
+    animation: HA1spanMovementAnimation 15s linear infinite,
+      HA1colorChanger 1s linear infinite;
+    animation-play-state: running, paused;
+  }
+
+  .HA1track2 span,
+  .HA1track4 span {
+    animation: HA1spanMovementAnimationReversed 15s linear infinite,
+      HA1colorChanger 1s linear infinite;
+    animation-play-state: running, paused;
+  }
+
+  .HA1track1 span:nth-last-child(-n + 7),
+  .HA1track2 span:nth-child(-n + 7),
+  .HA1track3 span:nth-last-child(-n + 7),
+  .HA1track4 span:nth-child(-n + 7) {
+    background-color: black;
+  }
 }
 
 @media (max-width: 600px) {
   .HA1text {
+    margin-top: -30px;
     font-size: 60px;
   }
 }
